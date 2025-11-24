@@ -10,9 +10,15 @@ use App\Http\Controllers\Admin\SubFacilityController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 // Public
+// Ensure login route exists (Breeze/Fortify fix)
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+// Public
 Route::get('/', function () {
     return redirect()->route('login');
-})->name('home');
+});
 
 // Authenticated routes
 Route::middleware(['auth'])->group(function () {
