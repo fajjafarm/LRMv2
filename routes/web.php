@@ -44,6 +44,18 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/coshh', 'coshh.index')->name('coshh.index');
     Route::view('/equipment', 'equipment.index')->name('equipment.index');
     Route::view('/palintest-import', 'palintest.import')->name('palintest.import');
+    Route::view('/voice-to-log', 'voice-to-log')->name('voice.to.log');
+    Route::view('/ai-assistant', 'ai-assistant')->name('ai.assistant');
+
+    // Parent Portal (public – no auth)
+    Route::get('/parent-portal/{token}', [App\Http\Controllers\ParentPortalController::class, 'show'])
+        ->name('parent.portal');
+
+    // Lifeguard Clock-In (public QR)
+    Route::get('/lifeguard/{facility}', [App\Http\Controllers\LifeguardController::class, 'show'])
+        ->name('lifeguard.portal');
+    Route::post('/lifeguard/{facility}', [App\Http\Controllers\LifeguardController::class, 'clockin'])
+        ->name('lifeguard.clockin');
 
     // SUPER ADMIN EMPIRE CONTROL
     Route::prefix('admin')->name('admin.')->middleware('can:access-superadmin')->group(function () {
