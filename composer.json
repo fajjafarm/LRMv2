@@ -7,18 +7,18 @@
     "license": "proprietary",
     "require": {
         "php": "^8.2|^8.3",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1",
-        "livewire/livewire": "^3.7",
-        "laravel/sanctum": "^4.0",
-        "laravel/cashier": "^15.0",
-        "spatie/laravel-permission": "^6.23",
-        "owen-it/laravel-auditing": "^14.0",
         "barryvdh/laravel-dompdf": "^3.0",
-        "maatwebsite/excel": "^3.1",
         "endroid/qr-code": "^5.0",
         "intervention/image": "^3.0",
-        "openai-php/laravel": "^0.10"
+        "laravel/cashier": "^15.0",
+        "laravel/framework": "^12.0",
+        "laravel/sanctum": "^4.0",
+        "laravel/tinker": "^2.10.1",
+        "livewire/livewire": "^3.7",
+        "maatwebsite/excel": "^3.1",
+        
+        "owen-it/laravel-auditing": "^14.0",
+        "spatie/laravel-permission": "^6.23"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -28,6 +28,7 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
+        "openai-php/laravel": "v0.10.2",
         "pestphp/pest": "^4.1",
         "pestphp/pest-plugin-laravel": "^4.0"
     },
