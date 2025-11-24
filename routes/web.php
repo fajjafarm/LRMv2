@@ -11,8 +11,8 @@ use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 // Public
 Route::get('/', function () {
-    return redirect('/login');
-});
+    return redirect()->route('login');
+})->name('home');
 
 // Authenticated routes
 Route::middleware(['auth'])->group(function () {
